@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>雷竞技 · 从稳定入口开始了解</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+            background-color: #f9fafb;
+            color: #1a1a2e;
+            line-height: 1.7;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .container {
+            max-width: 720px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* Hero */
+        .hero {
+            background-color: #ffffff;
+            border-bottom: 1px solid #e9ecef;
+            padding: 72px 0 56px;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 2.6rem;
+            font-weight: 500;
+            letter-spacing: -0.02em;
+            color: #0b1a2e;
+            margin-bottom: 12px;
+        }
+
+        .hero .sub {
+            font-size: 1.05rem;
+            color: #5b6777;
+            max-width: 480px;
+            margin: 0 auto;
+            line-height: 1.6;
+        }
+
+        .hero .sub a {
+            color: #1a4c8a;
+            text-decoration: none;
+            border-bottom: 1px solid #b6cde3;
+            transition: border-color 0.2s;
+        }
+
+        .hero .sub a:hover {
+            border-bottom-color: #1a4c8a;
+        }
+
+        /* Main content area */
+        .main-content {
+            padding: 60px 0 50px;
+            background: #ffffff;
+        }
+
+        .section {
+            margin-bottom: 48px;
+        }
+
+        .section:last-child {
+            margin-bottom: 0;
+        }
+
+        .section h2 {
+            font-size: 1.5rem;
+            font-weight: 500;
+            color: #12233f;
+            margin-bottom: 16px;
+            letter-spacing: -0.01em;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .section h2 .accent-line {
+            display: inline-block;
+            width: 4px;
+            height: 22px;
+            background: #3b6db0;
+            border-radius: 2px;
+        }
+
+        .section p {
+            font-size: 1rem;
+            color: #2a3346;
+            margin-bottom: 14px;
+        }
+
+        .section p:last-child {
+            margin-bottom: 0;
+        }
+
+        .card-note {
+            background: #f3f6fc;
+            border-left: 4px solid #3b6db0;
+            padding: 18px 22px;
+            border-radius: 0 8px 8px 0;
+            margin: 20px 0 10px;
+        }
+
+        .card-note p {
+            margin-bottom: 0;
+            font-size: 0.95rem;
+            color: #1e2f4a;
+        }
+
+        .card-note a {
+            color: #1a4c8a;
+            text-decoration: underline;
+            text-underline-offset: 3px;
+            text-decoration-thickness: 1px;
+            text-decoration-color: #9ab3d6;
+        }
+
+        .card-note a:hover {
+            text-decoration-color: #1a4c8a;
+        }
+
+        /* FAQ-style compact list */
+        .faq-mini {
+            list-style: none;
+            margin-top: 12px;
+        }
+
+        .faq-mini li {
+            padding: 12px 0;
+            border-bottom: 1px solid #eef1f5;
+        }
+
+        .faq-mini li:last-child {
+            border-bottom: none;
+        }
+
+        .faq-mini strong {
+            display: block;
+            font-weight: 500;
+            color: #0b1a2e;
+            margin-bottom: 4px;
+            font-size: 0.98rem;
+        }
+
+        .faq-mini span {
+            color: #3d4a5c;
+            font-size: 0.95rem;
+        }
+
+        .faq-mini a {
+            color: #1a4c8a;
+            text-decoration: underline;
+            text-underline-offset: 2px;
+        }
+
+        .faq-mini a:hover {
+            text-decoration: none;
+        }
+
+        /* Footer */
+        .page-footer {
+            background: #f2f4f8;
+            padding: 32px 0;
+            border-top: 1px solid #e0e4eb;
+        }
+
+        .page-footer .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: baseline;
+            gap: 10px 20px;
+        }
+
+        .page-footer p {
+            font-size: 0.9rem;
+            color: #4b5a6f;
+        }
+
+        .footer-link {
+            font-size: 0.92rem;
+        }
+
+        .footer-link a {
+            color: #1a4c8a;
+            text-decoration: none;
+            border-bottom: 1px solid #b6cde3;
+            transition: border-color 0.2s;
+        }
+
+        .footer-link a:hover {
+            border-bottom-color: #1a4c8a;
+        }
+
+        /* Responsive */
+        @media (max-width: 600px) {
+            .hero {
+                padding: 52px 0 40px;
+            }
+            .hero h1 {
+                font-size: 2rem;
+            }
+            .hero .sub {
+                font-size: 0.95rem;
+                padding: 0 8px;
+            }
+            .container {
+                padding: 0 18px;
+            }
+            .section h2 {
+                font-size: 1.3rem;
+            }
+            .page-footer .container {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+        }
+
+        @media (max-width: 420px) {
+            .hero h1 {
+                font-size: 1.7rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Hero 首页横幅 -->
+    <header class="hero">
+        <div class="container">
+            <h1>雷竞技 · 稳定入口</h1>
+            <p class="sub">
+                无论你从哪一页开始，<a href="https://ssl-leigame.com">雷竞技</a>的页面结构都保持清晰直接。
+                这不是一个需要反复寻路的地方——打开即是熟悉的界面。
+            </p>
+        </div>
+    </header>
+
+    <!-- 主要内容：三段自然介绍 + 背景说明 + FAQ摘要 -->
+    <section class="main-content">
+        <div class="container">
+
+            <!-- 第一段：背景说明 + 入口印象 -->
+            <div class="section">
+                <h2>
+                    <span class="accent-line"></span>
+                    从一次页面浏览说起
+                </h2>
+                <p>
+                    很多人第一次接触在线竞技内容，首先关心的不是功能多寡，而是页面是否干净、入口是否稳定。
+                    过去几年里，<a href="https://ssl-leigame.com">雷竞技</a>在界面结构上一直保持相对克制的风格——
+                    没有过度装饰，也没有频繁变动的导航路径。你记住的那个地址，打开后就是它该有的样子。
+                </p>
+                <p>
+                    这种稳定性在日常使用中其实挺重要。不用每次打开前都回想“上次是从哪里进去的”，
+                    也不用担心某一天突然找不到熟悉的选项。对于习惯固定节奏的人来说，一个稳定的访问入口本身就节省了不少精力。
+                </p>
+            </div>
+
+            <!-- 第二段：特点 + 使用场景（卡面风格） -->
+            <div class="section">
+                <h2>
+                    <span class="accent-line"></span>
+                    日常场景里的页面体验
+                </h2>
+                <p>
+                    无论是手机端还是电脑端，<a href="https://ssl-leigame.com">雷竞技</a>的页面布局都做了对应的适配。
+                    字体大小、按钮间距、内容宽度都随着屏幕尺寸自然调整——不需要左右滑动，也不会突然跳转到奇怪的地方。
+                </p>
+                <p>
+                    举个简单的例子：下午用平板打开浏览一遍，晚上换成手机继续查看，整个阅读节奏基本一致。
+                    这种细节看起来不起眼，但长时间使用下来，确实让人觉得顺手。
+                </p>
+
+                <!-- 点缀卡片：相当于一个小的说明块 -->
+                <div class="card-note">
+                    <p>
+                        除了界面本身，页面加载速度也保持在一个比较稳定的水平。
+                        如果你之前有过在别的站点反复等待加载的经历，或许能感受到这种顺畅带来的差别。
+                        当然，网络状况因人而异，但至少从页面设计上，没有多余的拖累。
+                    </p>
+                </div>
+            </div>
+
+            <!-- 第三段：FAQ 摘要 + 页尾提示（以问答形式融入介绍） -->
+            <div class="section">
+                <h2>
+                    <span class="accent-line"></span>
+                    一些大家常提到的问题
+                </h2>
+                <p style="margin-bottom: 8px;">
+                    根据用户反馈，我们整理了几个与页面访问相关的常见问题，也许对你有参考价值。
+                </p>
+                <ul class="faq-mini">
+                    <li>
+                        <strong>每次打开都是同样的界面吗？</strong>
+                        <span>是的，<a href="https://ssl-leigame.com">雷竞技</a>的首页结构保持相对固定，
+                        不会频繁改版。如果你习惯某个布局，可以放心使用。</span>
+                    </li>
+                    <li>
+                        <strong>在手机上显示会不会变形？</strong>
+                        <span>页面采用响应式设计，根据屏幕宽度自动调整内容宽度和间距。
+                        目前主流手机浏览都没有问题，你也可以用浏览器自带的“桌面版网站”模式切换看看。</span>
+                    </li>
+                    <li>
+                        <strong>地址栏里的 ssl 有什么含义？</strong>
+                        <span>简单说就是通过加密连接访问，这也是很多站点的基础配置。
+                        你只需要知道，通过 <a href="https://ssl-leigame.com">雷竞技</a> 这个地址进入，连接过程是经过加密的即可。</span>
+                    </li>
+                </ul>
+                <p style="margin-top: 18px; font-size: 0.95rem; color: #3d4a5c;">
+                    如果你还有其他关于页面使用的小疑问，可以自己打开感受一下，比听别人描述更直接。
+                </p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- 页尾访问提示 -->
+    <footer class="page-footer">
+        <div class="container">
+            <p>© 2025 · 页面介绍 · 无广告无诱导</p>
+            <div class="footer-link">
+                <a href="https://ssl-leigame.com">雷竞技</a> — 保持简单，稳定访问
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
