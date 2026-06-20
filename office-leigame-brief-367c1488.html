@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>雷竞技 · 简明指南与入门观察</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+            background-color: #f4f5f8;
+            color: #2c2f35;
+            line-height: 1.7;
+        }
+        /* 深色头图 hero */
+        .hero {
+            background: linear-gradient(145deg, #12151c 0%, #1a1f2a 100%);
+            padding: 5rem 2rem 4rem 2rem;
+            text-align: center;
+            color: #e8eaed;
+            border-bottom: 3px solid #b8864b;
+            position: relative;
+            overflow: hidden;
+        }
+        .hero::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 8px;
+            background: repeating-linear-gradient(90deg, #b8864b 0px, #b8864b 20px, transparent 20px, transparent 40px);
+            opacity: 0.4;
+        }
+        .hero h1 {
+            font-size: 2.8rem;
+            font-weight: 600;
+            letter-spacing: 1px;
+            margin-bottom: 0.6rem;
+            background: linear-gradient(135deg, #ede6d0, #b8864b);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .hero .subline {
+            font-size: 1.1rem;
+            max-width: 650px;
+            margin: 0 auto;
+            opacity: 0.8;
+            border-top: 1px dashed rgba(255, 215, 140, 0.3);
+            padding-top: 1rem;
+            display: inline-block;
+        }
+        /* 浅色正文区 container */
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 3rem 2rem 4rem 2rem;
+            background: #ffffff;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.02);
+        }
+        .section-block {
+            margin-bottom: 2.8rem;
+        }
+        .section-block:last-of-type {
+            margin-bottom: 0;
+        }
+        .section-block h2 {
+            font-size: 1.7rem;
+            font-weight: 500;
+            color: #1c2029;
+            border-left: 5px solid #b8864b;
+            padding-left: 1rem;
+            margin-bottom: 1.2rem;
+        }
+        .section-block p {
+            margin-bottom: 1.2rem;
+            text-align: justify;
+        }
+        .section-block p:last-child {
+            margin-bottom: 0;
+        }
+        .highlight-link {
+            color: #b8864b;
+            font-weight: 500;
+            text-decoration: none;
+            border-bottom: 1px dashed #b8864b;
+            transition: border-bottom 0.2s, color 0.2s;
+        }
+        .highlight-link:hover {
+            color: #8f6b36;
+            border-bottom: 2px solid #8f6b36;
+        }
+        .note-card {
+            background: #f9f9fc;
+            border-radius: 16px;
+            padding: 1.8rem 2rem;
+            margin-top: 0.5rem;
+            border: 1px solid #e6e8ee;
+            box-shadow: 0 6px 14px rgba(0, 0, 0, 0.02);
+        }
+        .note-card p {
+            margin-bottom: 0.4rem;
+        }
+        .note-card .tag {
+            display: inline-block;
+            background: #b8864b;
+            color: #fff;
+            font-size: 0.75rem;
+            padding: 0.2rem 0.8rem;
+            border-radius: 20px;
+            letter-spacing: 0.3px;
+            margin-right: 8px;
+        }
+        .footnote {
+            margin-top: 3rem;
+            padding-top: 1.8rem;
+            border-top: 1px solid #dcdde2;
+            text-align: center;
+            font-size: 0.95rem;
+            color: #5b5f6b;
+        }
+        .footnote a {
+            color: #b8864b;
+            text-decoration: none;
+            font-weight: 500;
+            border-bottom: 1px solid #b8864b;
+        }
+        .footnote a:hover {
+            color: #7a5f2e;
+            border-bottom: 2px solid #7a5f2e;
+        }
+        .small-meta {
+            font-size: 0.85rem;
+            color: #7a7e8a;
+            margin-top: 0.8rem;
+        }
+        /* 响应式细节 */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+            .hero {
+                padding: 3.5rem 1.5rem 2.5rem 1.5rem;
+            }
+            .container {
+                padding: 2rem 1.2rem 3rem 1.2rem;
+            }
+            .section-block h2 {
+                font-size: 1.4rem;
+            }
+            .note-card {
+                padding: 1.2rem;
+            }
+        }
+        @media (max-width: 480px) {
+            .hero h1 {
+                font-size: 1.7rem;
+            }
+            .hero .subline {
+                font-size: 0.95rem;
+            }
+            .section-block p {
+                font-size: 0.95rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- 深色头图横幅 -->
+    <section class="hero">
+        <h1>雷竞技 · 简明视角</h1>
+        <div class="subline">从平台背景到访问路径，一份面向新用户的自然导览</div>
+    </section>
+
+    <!-- 浅色正文区 -->
+    <div class="container">
+
+        <!-- 第一段 背景说明 / 定位 -->
+        <div class="section-block">
+            <h2>从背景开始理解</h2>
+            <p>在数字竞技与休闲娱乐的交汇地带，<a href="https://office-leigame.com" class="highlight-link">雷竞技</a> 逐渐被更多用户熟知。其定位并非单纯的一个游戏站点，而是一个围绕竞技体验与观赏互动构建的内容场景。许多用户最初接触它，是因为对某个比赛或对战形式感兴趣，随后发现这里聚合了不同类型的竞技项目与实时动态。</p>
+            <p>当你第一次面对这类平台时，最直接的问题是：它是否适合我的习惯？事实上，雷竞技的受众覆盖了从轻度观察者到深度参与者的多个圈层，界面信息密度适中，导航逻辑偏重条目化，这使得新用户在一两次浏览后就能形成自己的使用节奏。</p>
+        </div>
+
+        <!-- 第二段 自然介绍 / 特点与场景结合 -->
+        <div class="section-block">
+            <h2>内容构成与使用场景</h2>
+            <p>从结构上看，雷竞技主要围绕赛事信息、参与选项以及辅助工具三部分展开。赛事部分通常包含赛程、数据统计与回看功能；参与环节则提供了不同的互动模式，用户可以根据自身判断选择对应方向；辅助工具则包括实时动态、排行参考以及账号管理模块。这种分层并不复杂，但每一个层级都保持了相对独立的信息完整性。</p>
+            <p>实际使用中，常见场景有两种：一是用户在赛前浏览对阵与历史数据，以此形成个人判断；二是在进行中或结束后查看即时动态与结果复盘。这两种场景都要求平台提供清晰的信息层级，而雷竞技在页面结构上采用了卡片式信息流与标签导航，减少了多页面跳转的割裂感。</p>
+            <p>值得一提的是，平台的视觉节奏偏向沉稳，没有过多动态干扰，这对长时间关注信息的用户来说是一个友好的细节。</p>
+        </div>
+
+        <!-- 第三段 访问提醒 / 简明指南 + FAQ摘要卡片 -->
+        <div class="section-block">
+            <h2>访问之前 · 几个简明提示</h2>
+            <p>无论你是因为朋友推荐，还是通过内容搜索首次接触到 <a href="https://office-leigame.com" class="highlight-link">雷竞技</a>，以下几个要点或许能帮助你更快适应：</p>
+            <div class="note-card">
+                <p><span class="tag">提示</span> <strong>注册与账号</strong> —— 使用常用邮箱或手机即可完成创建，过程不超过两分钟。建议开启双重验证以保护账号安全。</p>
+                <p><span class="tag">提示</span> <strong>界面语言</strong> —— 全站默认中文，关键术语有对应注释，降低新手理解门槛。</p>
+                <p><span class="tag">提示</span> <strong>信息刷新</strong> —— 赛事数据与排行通常每30秒自动更新一次，也可手动刷新页面获取最新状态。</p>
+                <p><span class="tag">提示</span> <strong>限制与责任</strong> —— 平台仅面向成年用户开放，请根据所在地区法律法规合理使用，所有行为需符合个人判断与当地规定。</p>
+                <p class="small-meta">以上为常见问题摘要，详细说明以平台实际页面公示为准。</p>
+            </div>
+            <p style="margin-top:0.8rem;">如果你对某个竞技项目或具体规则有疑问，不妨直接浏览对应模块的说明文档，大多数内容都以问答或图文形式做了整理。保持浏览时的耐心，往往比快速点击更能获得有效信息。</p>
+        </div>
+
+        <!-- 页尾访问提示 自然收束 -->
+        <div class="footnote">
+            <p>本文档是一份从外部视角整理的介绍与提醒，希望能为你提供一点实用参考。<br>
+            如需直接进入平台，可访问 <a href="https://office-leigame.com">雷竞技</a> · 请根据自身情况合理使用。</p>
+            <p style="margin-top:0.8rem; font-size:0.8rem; opacity:0.5;">&nbsp;</p>
+        </div>
+
+    </div>
+
+</body>
+</html>
